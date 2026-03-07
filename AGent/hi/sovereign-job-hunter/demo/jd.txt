@@ -1,0 +1,21 @@
+Job Description: Senior Generative AI Engineer
+Location: Remote / Charlotte, NC (Hybrid)
+Experience: 3+ Years
+Role Overview
+We are looking for a specialized GenAI Engineer to lead the development of our next-generation AI platforms. You will be responsible for designing sophisticated RAG (Retrieval-Augmented Generation) pipelines and multi-agent orchestration systems to transform complex business requirements into scalable AI solutions.
+Key Responsibilities
+Architect & Deploy RAG Pipelines: Design end-to-end retrieval systems using LangChain, LlamaIndex, and vector databases to improve semantic search and response accuracy (pp. 1, 3).
+LLM Orchestration: Develop multi-agent workflows that enable agent-to-agent collaboration and integration with external tools for automated task execution (p. 3).
+Backend Development: Build and maintain high-performance, asynchronous APIs using FastAPI to serve generative AI models in production (p. 1).
+Prompt Engineering: Optimize prompt pipelines and fine-tune model parameters to achieve high intent-recognition accuracy across diverse user personas (p. 2).
+Data Strategy: Implement advanced data chunking and embedding strategies to enhance entity extraction and document retrieval performance (p. 3).
+Required Technical Stack
+Languages: Python (Expert), SQL.
+Frameworks: LangChain, FastAPI, PyTorch, TensorFlow.
+Generative AI: OpenAI SDK, Anthropic API, Meta Llama, Hugging Face Transformers.
+Cloud & DevOps: AWS or Azure, Docker, Kubernetes, GitHub Actions (CI/CD) (p. 1).
+ML Tools: Scikit-learn, XGBoost, Prophet (for predictive analytics) (pp. 1-2).
+Qualifications
+Master’s Degree in Computer Science or a related field (p. 3).
+Proven track record of building text-to-application or automated conversational interfaces (p. 2).
+Experience in the Pharmaceutical or Fintech domains is a plus (p. 2).

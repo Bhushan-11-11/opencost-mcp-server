@@ -1,0 +1,47 @@
+[project]
+name = "llm-auditor"
+version = "0.1.0"
+description = "The LLM Auditor evaluates LLM-generated answers, verifies actual accuracy using the web, and refines the response to ensure alignment with real-world knowledge."
+authors = [
+    { name = "Chun-Sung Ferng", email = "csferng@google.com" },
+    { name = "Cyrus Rashtchian", email = "cyroid@google.com" },
+    { name = "Da-Cheng Juan", email = "dacheng@google.com" },
+    { name = "Ivan Kuznetsov", email = "ivanku@google.com" },
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "google-adk>=1.0.0",
+    "google-cloud-aiplatform[adk,agent-engines]>=1.93.0",
+    "google-genai>=1.9.0",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "google-adk[eval]>=1.0.0",
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+]
+deployment = [
+    "absl-py>=2.2.1",
+]
+
+[tool.ruff]
+# Point back to the Master template in the root
+extend = "../../../pyproject.toml"
+
+[tool.ruff.lint.isort]
+# Categorizes the local package for correct import sorting
+known-first-party = ["llm_auditor"]
+
+[tool.hatch.build.targets.wheel]
+# Ensures Hatchling finds the package folder correctly
+packages = ["llm_auditor"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

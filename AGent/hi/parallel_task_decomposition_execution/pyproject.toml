@@ -1,0 +1,39 @@
+[project]
+name = "parallel-task-decomposition-execution"
+version = "0.1.0"
+description = "A sample agent that demonstrates parallel task decomposition and execution."
+authors = [
+    { name = "Google LLC" }
+]
+license = {text = "Apache License 2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "google-adk==1.19.0",
+    "python-dotenv==1.2.1",
+    "google-cloud-aiplatform[adk,agent-engines]==1.128.0",
+    "mcp==1.21.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[tool.ruff]
+# Point back to the Master template in the root
+extend = "../../../pyproject.toml"
+
+[tool.ruff.lint.isort]
+# CRITICAL: Ensures the internal logic is treated as first-party
+known-first-party = ["parallel_task_decomposition_execution"]
+
+[tool.hatch.build.targets.wheel]
+# Explicitly mapping the package folder to avoid discovery errors
+packages = ["parallel_task_decomposition_execution"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
