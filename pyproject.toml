@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencost-mcp-server"
+version = "0.1.0"
+description = "MCP server exposing OpenCost Kubernetes cost data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+]
+
+[project.scripts]
+opencost-mcp = "opencost_mcp.server:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
